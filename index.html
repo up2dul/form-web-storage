@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple web storage form</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="text-bg-primary">
+  <div class="container my-5">
+    <h1 class="text-center">User form</h1>
+    <p class="text-center">the submitted data will be stored in web storage.</p>
+    <div class="row justify-content-center mt-5">
+      <form class="col-4 col-8 col-md-6 col-lg-4 p-4 rounded text-dark bg-body" id="formUser">
+        <div class="mb-3">
+          <label for="inputName" class="form-label">Full name</label>
+          <input type="text" class="form-control" id="inputName" autocomplete="off" required>
+        </div>
+        <div class="mb-3">
+          <label for="inputAge" class="form-label">Age</label>
+          <input type="number" class="form-control" id="inputAge" autocomplete="off" required min="1" max="99">
+        </div>
+        <div class="mb-3">
+          <label>Gender</label>
+          <select class="form-select" id="inputGender" required>
+            <option selected value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2 w-100">Add user</button>
+      </form>
+    </div>
+
+    <table class="table table-light table-striped rounded mt-5">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+        </tr>
+      </thead>
+      <tbody class="table-body-list">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
